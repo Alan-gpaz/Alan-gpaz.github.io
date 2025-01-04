@@ -1,0 +1,896 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+body {
+    background-color: #ffffffc8;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+}
+
+.swiper-button-prev::after { 
+    font-size: 25px;
+}
+.swiper-button-next {
+    color: #3d71d2;
+}
+.swiper-button-prev {
+    color: #3d71d2;
+}
+
+.swiper-pagination-bullet {
+    background-color: #000000;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3d71d2;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+}
+.menu-1 {
+    margin-right: 180px;
+
+}
+.menu-2 {
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-1 {
+    width: 0;
+}
+.logo-2 {
+    width: 150px;
+}
+
+.socials {
+    display: flex;
+
+}
+
+.social {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #3d71d2;
+    border-radius: 50%;
+}
+
+.social:hover {
+    background-color: #b4d8ed;
+}
+
+.social img {
+    margin: 8px 0 0 10px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #3d71d2;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #3d71d2;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    margin-top: 200px;
+    padding-bottom: 50px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+}
+
+.slider-txt {
+    margin-left: 85px;
+    width: 50%;
+}
+.slider-txt h1 {
+    font-size: 70px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.slider-txt p{
+    font-size: 18px;
+    color: #000000;
+}
+
+.botones {
+    margin-top: 50px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid #DB241B;
+    color: #3d71d2;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    border-radius: 50px;
+}
+
+.btn-1:hover {
+    background-color: #DB241B;
+}
+
+.slider-img {
+    width: 50%;
+}
+
+.slider-img img{
+    margin-right: 225px;
+    width: 550px;
+}
+
+.products {
+    background-color: #0d0d0d;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0px;
+}
+
+.tabs label {
+    width: 15%;
+    order: 1;
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    cursor: pointer;
+    color: #A7A7A7;
+    font-weight: 700;
+    transition: background ease 0.2s;
+}
+
+.tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding-top: 25px;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked + label {
+    border-bottom: 2px solid #DB241B;
+    color: #FFFFFF;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+    display: block;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    margin: 0 10px;
+}
+
+.product-img {
+    width: 50%;
+    text-align: left;
+}
+
+.product-img h4 {
+    display: inline-block;
+    padding: 5px 7px;
+    line-height: 15px;
+    color: #000000;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
+    border: 2px solid #555555;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.product-img img {
+    width: 150px;
+    height: 120px;
+}
+
+.product-txt {
+    width: 50%;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.product-txt h4 {
+    color: #000000;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.product-txt p {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.product-txt span {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.info {
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.info-img {
+    width: 90%;
+}
+
+.info-img img {
+    width: 400px;
+    height: 400px;
+}
+
+.info-txt {
+    width: 1000%;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.info-txt h2 {
+    font-size: 50px;
+    color: #000000;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 80px;
+    text-align: center;
+
+}
+
+.info-txt p {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #DB241B;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.btn-2:hover {
+    background-color: #ab1c15;
+}
+
+.horario {
+    padding: 100px 0px;
+    background-color: #ffffff;
+}
+
+.horario-info h2 {
+    font-size: 75px;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.horario-txt {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.txt {
+    color: #000000;
+}
+
+.txt h4 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.txt p {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.map {
+    filter: grayscale(0%) invert(0%) contrast(100%);
+}
+
+.footer {
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links h4 {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.links ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+@media(max-width: 991px) {
+    .menu {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu-2 {
+        display: none;
+    }
+
+    .logo-1 {
+        width: 100px;
+    }
+
+    .logo-2 {
+        width: 0;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #181818;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        padding: 30px;
+        margin-top: 100px;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slider-txt {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .slider-txt h1 {
+        font-size: 50px;
+
+    }
+
+    .slider-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1 {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .slider-img {
+        width: 100%; /* Ajusta el contenedor */
+        text-align: center; /* Centra las imágenes */
+    }
+    
+    .slider-img img {
+        width: 100%; /* Hace que las imágenes sean responsivas */
+        max-width: 300px; /* Limita el tamaño máximo */
+        height: auto; /* Mantiene la proporción */
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullet,
+    .swiper-pagination-bullet, .swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -7px;
+    }
+
+    .tabs {
+        padding: 50px 30px;
+
+    }
+
+    .tabs label {
+        width: 33%;
+    }
+
+    .info {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .info-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-img img {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .info-txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-txt h2 {
+        font-size: 50px;
+    }
+
+    .info-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1 {
+        font-size: 16px;
+    }
+
+    .horario {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .horario-info h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .horario-txt {
+        flex-direction: column;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .social img {
+        margin: 8px 0 0 0;
+    }
+
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links h4 {
+        margin: 25px 0px 10px 0px;
+    }
+}
+
+.boton-agendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.boton-agendar button {
+    background-color: #3d71d2;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 15px 35px;
+    border: none;
+}
+
+.boton-agendar button:hover {
+    background-color: #3d71d2;
+}
+
+/* Estilos generales para la imagen, la información y las frases */
+.contenedor-psicologa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.psicologa-info h3 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.psicologa-info p {
+    font-size: 1.2em;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.psicologa-foto {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.psicologa-foto img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    transition: transform 0.5s ease;
+}
+
+.psicologa-foto img:hover {
+    transform: scale(1.1);
+}
+
+.frases-psicologia {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frases-psicologia .frase {
+    background-color: #DB241B;
+    color: #FFFFFF;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .psicologa-info h3 {
+        font-size: 2em;
+    }
+
+    .psicologa-info p {
+        font-size: 1em;
+    }
+
+    .psicologa-foto img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .frases-psicologia .frase {
+        font-size: 1.2em;
+        padding: 10px;
+        width: 90%;
+    }
+
+    .boton-agendar button {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+    .psicologa-info h3 {
+        font-size: 1.8em;
+    }
+
+    .psicologa-info p {
+        font-size: 0.9em;
+    }
+
+    .psicologa-foto img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .frases-psicologia .frase {
+        font-size: 1em;
+        padding: 8px;
+        width: 95%;
+    }
+
+    .boton-agendar button {
+        font-size: 14px;
+        padding: 12px 30px;
+    }
+}
+
+/* Contenedor principal de la psicóloga */
+.contenedor-psicologa {
+    padding: 40px;
+    text-align: center;
+    background-color: #ececec;
+    color: #FFFFFF;
+}
+
+/* Estilo para la información de la psicóloga */
+.psicologa-info h3 {
+    font-size: 2.5em;
+    color: #140045;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el texto de la información */
+.psicologa-info p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+    color: #000000;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Estilo para las fechas y cursos importantes */
+.psicologa-info p strong {
+    font-weight: 800;
+    color: #4fa7b3;
+}
+
+/* Respuesta para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .psicologa-info h3 {
+        font-size: 2em;
+    }
+
+    .psicologa-info p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .psicologa-info h3 {
+        font-size: 1.7em;
+    }
+
+    .psicologa-info p {
+        font-size: 0.9em;
+    }
+}
+
+/* Estilo para el contenedor de las frases */
+.frases-psicologia {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para cada frase */
+.frase p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animación para que las frases aparezcan suavemente */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* En pantallas más grandes, cambiar a una disposición de 3 columnas */
+@media (min-width: 992px) {
+    .frases-psicologia {
+        flex-direction: row; /* Disposición en fila */
+        justify-content: space-between; /* Separar las frases de manera uniforme */
+        gap: 30px; /* Espacio entre las frases */
+    }
+
+    .frase {
+        width: 30%; /* Ancho de cada frase */
+        text-align: left; /* Alineación a la izquierda por defecto */
+    }
+
+    .frase:nth-child(2) {
+        text-align: center; /* La segunda frase se alinea al centro */
+    }
+}
+
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que las tarjetas se acomoden en varias filas */
+    justify-content: center;  /* Centra las tarjetas en la fila */
+    gap: 15px;  /* Espacio entre las tarjetas */
+    margin-top: 40px;  /* Margen superior */
+    padding: 20px;
+    margin: 0 auto;  /* Centra el contenedor */
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 300px;  /* Ajusta la altura de las tarjetas */
+    width: 300px;  /* Ajusta el ancho de las tarjetas */
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+    font-size: 1.2em;  /* Tamaño de fuente aumentado */
+    padding: 10px;
+  }
+  
+  .cards .card.red {
+    background-color: #f43f5e;
+  }
+  
+  .cards .card.blue {
+    background-color: #3b82f6;
+  }
+  
+  .cards .card.green {
+    background-color: #02AC66;
+  }
+  
+  .cards .card.yellow {
+    background-color: #E7D40A;
+  }
+  
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .cards .card p.second-text {
+    font-size: 0.7em;
+  }
+  
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 400ms;
+  }
+  
+  @media (min-width: 992px) {
+    .cards .card {
+      width: 400px;  /* Ajusta el tamaño de las tarjetas en pantallas grandes */
+      height: 400px;  /* Ajusta la altura de las tarjetas en pantallas grandes */
+      font-size: 1.4em;  /* Aumenta el tamaño de la fuente */
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .cards {
+      flex-direction: column;  /* Las tarjetas se apilan verticalmente */
+      align-items: center;  /* Centra las tarjetas */
+    }
+  
+    .cards .card {
+      width: 90%;  /* Las tarjetas ocupan el 90% del ancho del contenedor */
+      height: auto;  /* Altura automática */
+      margin-bottom: 20px;  /* Espacio entre las tarjetas */
+      font-size: 1em;  /* Tamaño de fuente reducido */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cards .card {
+      width: 100%;  /* Ocupan el 100% del ancho del contenedor */
+      height: 100%;  /* Ocupan toda la altura disponible */
+      font-size: 0.9em;  /* Tamaño de fuente más pequeño */
+    }
+  }
+  
