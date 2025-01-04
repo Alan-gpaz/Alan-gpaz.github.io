@@ -421,7 +421,8 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #beb8b8;
+        background-color: #ececec;
+        color: #FFFFFF;
         display: none;
     }
 
