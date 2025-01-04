@@ -895,3 +895,26 @@ body {
     }
   }
   
+ 
+
+header, footer {
+    background-color: #ffffff; /* Fondo azul */
+    color: rgb(0, 0, 0); /* Texto blanco para que resalte sobre el fondo azul */
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid #ddd; 
+    border-bottom: 1px solid  #ddd; 
+}
+
+header {
+    border-bottom: none; /* Elimina el borde inferior del header */
+}
+
+footer {
+    margin-top: auto; /* Alinea el pie de página al final del contenido */
+}
+
+main {
+    flex: 1; /* Para que el contenido principal ocupe el espacio restante */
+    padding: 1em;
+}
