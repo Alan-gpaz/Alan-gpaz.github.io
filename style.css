@@ -225,10 +225,13 @@ body {
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    text-align: left; /* Alinear las preguntas a la izquierda */
 }
 
+
 .pregunta {
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Espacio entre preguntas */
+    text-align: left; /* Alinear las preguntas a la izquierda */
 }
 
 .radio-input-wrapper {
@@ -311,8 +314,21 @@ button {
 }
 
 button:hover {
-    background-color: #00c6ff;
+    background-color: #00c6ff; 
 }
+
+
+
+input[type="text"] { 
+    width: 100%;       
+    padding: 5px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left; /* Asegurar que el texto se alinee a la izquierda */
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
