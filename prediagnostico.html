@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prediagnóstico y Respuestas</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -27,66 +28,108 @@
     </div>
 </div>
 
-<div class="prediagnostico">
-  <h2>GRACIAS POR AGENDAR UNA CITA, ANTES DE ACUDIR FAVOR DE RESPONDER LAS SIGUIENTES PREGUNTAS Y ENVIARLAS PREVIO A LA CITA O LLEVARLAS EL DIA DE LA CITA.</h2>
-  <form class="my-form" id="prediagnostico-form">
-      <div class="pregunta">
-          <label for="pregunta1">1. ¿CÚAL ES EL MOTIVO DE TU CONSULTA?</label>
-          <input type="text" name="pregunta1" id="pregunta1" placeholder="Escribe tu respuesta aquí">
-      </div>
+    <div class="prediagnostico">
+        <h2>GRACIAS POR AGENDAR UNA CITA, ANTES DE ACUDIR FAVOR DE RESPONDER LAS SIGUIENTES PREGUNTAS Y ENVIARLAS PREVIO A LA CITA O LLEVARLAS EL DIA DE LA CITA.</h2>
+        <form class="my-form" id="prediagnostico-form" onsubmit="return generarPDF();">
+            <div class="pregunta">
+                <label for="pregunta1">1. ¿CÚAL ES EL MOTIVO DE TU CONSULTA?</label>
+                <input type="text" name="pregunta1" id="pregunta1" placeholder="Escribe tu respuesta aquí">
+            </div>
 
-      <div class="pregunta">
-          <label for="pregunta2">2. ¿ALGUNA VEZ HAS ACUDIDO A UNA TERAPIA PSICOLÓGICA?</label>
-          <div class="radio-input-wrapper">
-              <label class="label">
-                  <input type="radio" name="pregunta2" value="si" id="radio-2-1" class="radio-input">
-                  <div class="radio-design"></div>
-                  <div class="label-text">SI</div>
-              </label>
-              <label class="label">
-                  <input type="radio" name="pregunta2" value="no" id="radio-2-2" class="radio-input">
-                  <div class="radio-design"></div>
-                  <div class="label-text">NO</div>
-              </label>
-          </div>
-      </div>
+            <div class="pregunta">
+                <label for="pregunta2">2. ¿ALGUNA VEZ HAS ACUDIDO A UNA TERAPIA PSICOLÓGICA?</label>
+                <div class="radio-input-wrapper">
+                    <label class="label">
+                        <input type="radio" name="pregunta2" value="si" id="radio-2-1" class="radio-input">
+                        <div class="radio-design"></div>
+                        <div class="label-text">SI</div>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="pregunta2" value="no" id="radio-2-2" class="radio-input">
+                        <div class="radio-design"></div>
+                        <div class="label-text">NO</div>
+                    </label>
+                </div>
+            </div>
 
-      <div class="pregunta">
-          <label for="pregunta3">3. ¿QUÉ ESPERAS DEL PROCESO DE ASESORAMIENTO?</label>
-          <input type="text" name="pregunta3" id="pregunta3" placeholder="Escribe tu respuesta aquí">
-      </div>
+            <div class="pregunta">
+                <label for="pregunta3">3. ¿QUÉ ESPERAS DEL PROCESO DE ASESORAMIENTO?</label>
+                <input type="text" name="pregunta3" id="pregunta3" placeholder="Escribe tu respuesta aquí">
+            </div>
 
-      <div class="pregunta">
-          <label for="pregunta4">4. ¿CUÁL ES EL PROBLEMA DESDE TU PUNTO DE VISTA?</label>
-          <input type="text" name="pregunta4" id="pregunta4" placeholder="Escribe tu respuesta aquí">
-      </div>
+            <div class="pregunta">
+                <label for="pregunta4">4. ¿CUÁL ES EL PROBLEMA DESDE TU PUNTO DE VISTA?</label>
+                <input type="text" name="pregunta4" id="pregunta4" placeholder="Escribe tu respuesta aquí">
+            </div>
 
-      <div class="pregunta">
-          <label for="pregunta5">5. ¿CÓMO TE HACE SENTIR ESE PROBLEMA?</label>
-          <input type="text" name="pregunta5" id="pregunta5" placeholder="Escribe tu respuesta aquí">
-      </div>
+            <div class="pregunta">
+                <label for="pregunta5">5. ¿CÓMO TE HACE SENTIR ESE PROBLEMA?</label>
+                <input type="text" name="pregunta5" id="pregunta5" placeholder="Escribe tu respuesta aquí">
+            </div>
 
-      <div class="pregunta">
-          <label for="pregunta6">6. ¿CON QUÉ FRECUENCIA EXPERIMENTAS EL PROBLEMA?</label>
-          <input type="text" name="pregunta6" id="pregunta6" placeholder="Escribe tu respuesta aquí">
-      </div>
+            <div class="pregunta">
+                <label for="pregunta6">6. ¿CON QUÉ FRECUENCIA EXPERIMENTAS EL PROBLEMA?</label>
+                <input type="text" name="pregunta6" id="pregunta6" placeholder="Escribe tu respuesta aquí">
+            </div>
 
-      <div class="pregunta">
-          <label for="pregunta7">7. ¿ALGUNA VEZ NO HAS TENIDO EL PROBLEMA O HAS NOTADO QUE EL PROBLEMA HA DESAPARECIDO POR COMPLETO?</label>
-          <input type="text" name="pregunta7" id="pregunta7" placeholder="Escribe tu respuesta aquí">
-      </div>
+            <div class="pregunta">
+                <label for="pregunta7">7. ¿ALGUNA VEZ NO HAS TENIDO EL PROBLEMA O HAS NOTADO QUE EL PROBLEMA HA DESAPARECIDO POR COMPLETO?</label>
+                <input type="text" name="pregunta7" id="pregunta7" placeholder="Escribe tu respuesta aquí">
+            </div>
 
-      <div class="pregunta">
-          <label for="pregunta8">8. ¿CÓMO AFECTA EL PROBLEMA A TU AUTOESTIMA O SENTIMIENTO DE CULPA?</label>
-          <input type="text" name="pregunta8" id="pregunta8" placeholder="Escribe tu respuesta aquí">
-      </div>
-  </form>
+            <div class="pregunta">
+                <label for="pregunta8">8. ¿CÓMO AFECTA EL PROBLEMA A TU AUTOESTIMA O SENTIMIENTO DE CULPA?</label>
+                <input type="text" name="pregunta8" id="pregunta8" placeholder="Escribe tu respuesta aquí">
+            </div>
 
- 
-<button type="submit">Enviar</button>
-    </form>
-    <div id="resultado"></div>
-  </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
 
-  </body>
-  </html>
+    <script>
+        function generarPDF() {
+            var { jsPDF } = window.jspdf;
+            var doc = new jsPDF();
+
+            doc.text("Respuestas de la Encuesta", 10, 10);
+
+            var pregunta1 = document.getElementById('pregunta1').value;
+            doc.text("1. ¿CÚAL ES EL MOTIVO DE TU CONSULTA?", 10, 20);
+            doc.text(pregunta1, 10, 30);
+
+            var pregunta2 = document.querySelector('input[name="pregunta2"]:checked').value;
+            doc.text("2. ¿ALGUNA VEZ HAS ACUDIDO A UNA TERAPIA PSICOLÓGICA?", 10, 40);
+            doc.text(pregunta2, 10, 50);
+
+            var pregunta3 = document.getElementById('pregunta3').value;
+            doc.text("3. ¿QUÉ ESPERAS DEL PROCESO DE ASESORAMIENTO?", 10, 60);
+            doc.text(pregunta3, 10, 70);
+
+            var pregunta4 = document.getElementById('pregunta4').value;
+            doc.text("4. ¿CUÁL ES EL PROBLEMA DESDE TU PUNTO DE VISTA?", 10, 80);
+            doc.text(pregunta4, 10, 90);
+
+            var pregunta5 = document.getElementById('pregunta5').value;
+            doc.text("5. ¿CÓMO TE HACE SENTIR ESE PROBLEMA?", 10, 100);
+            doc.text(pregunta5, 10, 110);
+
+            var pregunta6 = document.getElementById('pregunta6').value;
+            doc.text("6. ¿CON QUÉ FRECUENCIA EXPERIMENTAS EL PROBLEMA?", 10, 120);
+            doc.text(pregunta6, 10, 130);
+
+            var pregunta7 = document.getElementById('pregunta7').value;
+            doc.text("7. ¿ALGUNA VEZ NO HAS TENIDO EL PROBLEMA O HAS NOTADO QUE EL PROBLEMA HA DESAPARECIDO POR COMPLETO?", 10, 140);
+            doc.text(pregunta7, 10, 150);
+
+            var pregunta8 = document.getElementById('pregunta8').value;
+            doc.text("8. ¿CÓMO AFECTA EL PROBLEMA A TU AUTOESTIMA O SENTIMIENTO DE CULPA?", 10, 160);
+            doc.text(pregunta8, 10, 170);
+
+            doc.save("respuestas.pdf");
+            alert("Por favor, lleva el PDF impreso a la consulta.");
+            return false; // Prevenir el envío del formulario real
+        }
+    </script>
+</body>
+</html>
