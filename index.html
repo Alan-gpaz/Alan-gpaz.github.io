@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styless.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    <script> function redirigir(perfilDesktop, perfilMovil) {
+         const esMovil = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+          window.location.href = esMovil ? perfilMovil : perfilDesktop; 
+          } 
+          </script>
     
 
     <style>
@@ -56,7 +60,7 @@
                     <div class="menu-2">
                         
                         <div class="socials">
-                            <a href="fb://profile/100005650298783">
+                            <a href="javascript:redirigir('https://www.facebook.com/profile.php?id=100005650298783&mibextid=ZbWKwL', 'fb://profile/100005650298783')"> <div class="social"></div>
                                 <div class="social">
                                     <img src="s1.svg" alt="">
                                 </div>
@@ -199,7 +203,7 @@
                     <div class="txt">
                         <h4>Redes Sociales</h4>
                         <div class="socials">
-                            <a href="fb://profile/100005650298783">
+                            <a href="javascript:redirigir('https://www.facebook.com/profile.php?id=100005650298783&mibextid=ZbWKwL', 'fb://profile/100005650298783')"> <div class="social">
                                 <div class="social">
                                     <img src="s1.svg" alt="">
                                 </div>
@@ -246,12 +250,6 @@
     
             </section>
             <br>
-            <br>
-
-
-
-
-
             <br>
             <br>
     
